@@ -5,7 +5,20 @@ Google Cloud
 
 Instances---
 
+
 Name	Zone	Recommendation	Internal IP	External IP	Connect	
+ instance-10	asia-southeast1-b		
+10.148.0.2
+35.198.254.186
+ 	
+ instance-11	us-east1-b		
+10.142.0.2
+35.227.93.84 
+ 	
+ instance-6	europe-west4-a		
+10.164.0.2
+35.204.227.133 
+ 	
  instance-8	asia-east1-b		
 10.140.0.2
 35.234.58.222 
@@ -14,17 +27,7 @@ Name	Zone	Recommendation	Internal IP	External IP	Connect
 10.140.0.3
 104.155.219.62 
  	
- instance-10	asia-southeast1-b		
-10.148.0.2
-35.198.254.186
- 	
- instance-6	europe-west4-a		
-10.164.0.2
-35.204.227.133 
- 	
- instance-7	europe-west4-b		
-10.164.0.3
-35.204.133.65 
+
 
 
 File System Capacity First Node--
