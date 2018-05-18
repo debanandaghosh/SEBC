@@ -65,8 +65,37 @@ Name	Zone	Recommendation	Internal IP	External IP	Connect
 35.230.55.189 
  	
 	
-	
+[root@instance-2 debanandaghosh]# df -Th
+Filesystem     Type      Size  Used Avail Use% Mounted on
+/dev/sda1      xfs        10G  2.0G  8.1G  20% /
+devtmpfs       devtmpfs  7.3G     0  7.3G   0% /dev
+tmpfs          tmpfs     7.3G     0  7.3G   0% /dev/shm
+tmpfs          tmpfs     7.3G  9.4M  7.3G   1% /run
+tmpfs          tmpfs     7.3G     0  7.3G   0% /sys/fs/cgroup
+tmpfs          tmpfs     1.5G     0  1.5G   0% /run/user/1000
+tmpfs          tmpfs     1.5G     0  1.5G   0% /run/user/0
 
+
+[root@instance-3 debanandaghosh]# df -Th
+Filesystem     Type      Size  Used Avail Use% Mounted on
+/dev/sda1      xfs       100G  2.0G   99G   2% /
+devtmpfs       devtmpfs  7.3G     0  7.3G   0% /dev
+tmpfs          tmpfs     7.3G     0  7.3G   0% /dev/shm
+tmpfs          tmpfs     7.3G  9.4M  7.3G   1% /run
+tmpfs          tmpfs     7.3G     0  7.3G   0% /sys/fs/cgroup
+tmpfs          tmpfs     1.5G     0  1.5G   0% /run/user/1000
+tmpfs          tmpfs     1.5G     0  1.5G   0% /run/user/0
+
+[root@instance-4 debanandaghosh]# df -Th
+Filesystem     Type      Size  Used Avail Use% Mounted on
+/dev/sda1      xfs       100G  2.0G   99G   2% /
+devtmpfs       devtmpfs  7.3G     0  7.3G   0% /dev
+tmpfs          tmpfs     7.3G     0  7.3G   0% /dev/shm
+tmpfs          tmpfs     7.3G  9.4M  7.3G   1% /run
+tmpfs          tmpfs     7.3G     0  7.3G   0% /sys/fs/cgroup
+tmpfs          tmpfs     1.5G     0  1.5G   0% /run/user/1000
+tmpfs          tmpfs     1.5G     0  1.5G   0% /run/user/0
+	
 
 [root@instance-5 debanandaghosh]# df -Th
 Filesystem     Type      Size  Used Avail Use% Mounted on
@@ -77,6 +106,51 @@ tmpfs          tmpfs     7.3G  9.4M  7.3G   1% /run
 tmpfs          tmpfs     7.3G     0  7.3G   0% /sys/fs/cgroup
 tmpfs          tmpfs     1.5G     0  1.5G   0% /run/user/1000
 
+[root@instance-1 debanandaghosh]# sudo bash
+[root@instance-1 debanandaghosh]# useradd -u 2500 thanos
+[root@instance-1 debanandaghosh]# useradd -u 2600 hulk
+[root@instance-1 debanandaghosh]# useradd -u 2700 groot
+[root@instance-1 debanandaghosh]# sudo groupadd blackorder
+[root@instance-1 debanandaghosh]# sudo usermod -a -G blackorder thanos
+[root@instance-1 debanandaghosh]# sudo groupadd avengers
+[root@instance-1 debanandaghosh]# sudo usermod -a -G avengers hulk
+[root@instance-1 debanandaghosh]# sudo usermod -a -G avengers groot
+[root@instance-1 debanandaghosh]# yum repolist enabled
+
+
+[root@instance-2 debanandaghosh]# sudo bash
+[root@instance-2 debanandaghosh]# useradd -u 2500 thanos
+[root@instance-2 debanandaghosh]# useradd -u 2600 hulk
+[root@instance-2 debanandaghosh]# useradd -u 2700 groot
+[root@instance-2 debanandaghosh]# sudo groupadd blackorder
+[root@instance-2 debanandaghosh]# sudo usermod -a -G blackorder thanos
+[root@instance-2 debanandaghosh]# sudo groupadd avengers
+[root@instance-2 debanandaghosh]# sudo usermod -a -G avengers hulk
+[root@instance-2 debanandaghosh]# sudo usermod -a -G avengers groot
+[root@instance-2 debanandaghosh]# yum repolist enabled
+
+
+[root@instance-3 debanandaghosh]# sudo bash
+[root@instance-3 debanandaghosh]# useradd -u 2500 thanos
+[root@instance-3 debanandaghosh]# useradd -u 2600 hulk
+[root@instance-3 debanandaghosh]# useradd -u 2700 groot
+[root@instance-3 debanandaghosh]# sudo groupadd blackorder
+[root@instance-3 debanandaghosh]# sudo usermod -a -G blackorder thanos
+[root@instance-3 debanandaghosh]# sudo groupadd avengers
+[root@instance-3 debanandaghosh]# sudo usermod -a -G avengers hulk
+[root@instance-3 debanandaghosh]# sudo usermod -a -G avengers groot
+[root@instance-3 debanandaghosh]# yum repolist enabled
+
+[root@instance-4 debanandaghosh]# sudo bash
+[root@instance-4 debanandaghosh]# useradd -u 2500 thanos
+[root@instance-4 debanandaghosh]# useradd -u 2600 hulk
+[root@instance-4 debanandaghosh]# useradd -u 2700 groot
+[root@instance-4 debanandaghosh]# sudo groupadd blackorder
+[root@instance-4 debanandaghosh]# sudo usermod -a -G blackorder thanos
+[root@instance-4 debanandaghosh]# sudo groupadd avengers
+[root@instance-4 debanandaghosh]# sudo usermod -a -G avengers hulk
+[root@instance-4 debanandaghosh]# sudo usermod -a -G avengers groot
+[root@instance-4 debanandaghosh]# yum repolist enabled
 
 
 [root@instance-5 debanandaghosh]# sudo bash
@@ -89,6 +163,7 @@ tmpfs          tmpfs     1.5G     0  1.5G   0% /run/user/1000
 [root@instance-5 debanandaghosh]# sudo usermod -a -G avengers hulk
 [root@instance-5 debanandaghosh]# sudo usermod -a -G avengers groot
 [root@instance-5 debanandaghosh]# yum repolist enabled
+
 
 
 
